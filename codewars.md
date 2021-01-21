@@ -44,3 +44,15 @@ Examples:
 select id,(case when n % x = 0 and n % y = 0 then 'true' else 'false') as res from kata
 below is the correct solution
 select id, n%x = 0 and n % y =  as res from kata -->
+
+<!-- even or odd 
+my solution
+select 
+case 
+  when number % 2 = 0 then 'Even' 
+  else 'Odd' 
+end as is_even 
+from numbers -->
+
+<!-- opposite number
+select -number as res from opposite -->s
