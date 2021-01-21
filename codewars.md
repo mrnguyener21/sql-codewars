@@ -55,4 +55,42 @@ end as is_even
 from numbers -->
 
 <!-- opposite number
-select -number as res from opposite -->s
+select -number as res from opposite -->
+
+
+<!-- is divisible by x and y?
+Create a function that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero digits.
+
+Examples:
+1) n =   3, x = 1, y = 3 =>  true because   3 is divisible by 1 and 3
+2) n =  12, x = 2, y = 6 =>  true because  12 is divisible by 2 and 6
+3) n = 100, x = 5, y = 3 => false because 100 is not divisible by 3
+4) n =  12, x = 7, y = 5 => false because  12 is neither divisible by 7 nor 5
+
+-- you will be given a table 'kata' with columns 'n', 'x', and 'y'. Return the 'id' and your result in a column named 'res'
+
+select id,
+case
+  when n%x = 0 and n%y =0
+  then 'true'
+  else 'false'
+end as res
+from kata -->
+<!-- 
+#century from year
+Introduction
+The first century spans from the year 1 up to and including the year 100, The second - from the year 101 up to and including the year 200, etc.
+
+Task :
+Given a year, return the century it is in.
+
+Input , Output Examples ::
+centuryFromYear(1705)  returns (18)
+centuryFromYear(1900)  returns (19)
+centuryFromYear(1601)  returns (17)
+centuryFromYear(2000)  returns (20)
+In SQL, you will be given a table years with a column yr for the year. Return a table with a column century.
+
+Hope you enjoy it .. Awaiting for Best P
+
+select ceiling(yr/100) as century from yeears -->
