@@ -114,3 +114,26 @@ time = 11.8 litres = 5
 You have to return 3 columns: id, hours and liters (not litres, it's a difference from the kata description) 
 
 select id, hours, floor(hours*0.5) as liters from cycling -->
+
+<!-- beginner series #2 clock -->
+<!-- Clock shows h hours, m minutes and s seconds after midnight.
+
+Your task is to write a function which returns the time since midnight in milliseconds.
+
+Example:
+h = 0
+m = 1
+s = 1
+
+result = 61000
+Input constraints:
+
+0 <= h <= 23
+0 <= m <= 59
+0 <= s <= 59 -->
+<!-- select ((s * 1000) + (m * 60000) + (h *3600000)) as res from past -->
+
+<!-- Expression matters
+Given three integers a ,b ,c, return the largest number obtained after inserting the following operators and brackets: +, *, ()
+In other words , *_try every combination of a,b,c with [+()] , and return the Maximum Obtained_** -->
+SELECT GREATEST( a+b+c, (a+b)*c, a*(b+c), a*b*c )  AS res FROM expression_matter;
