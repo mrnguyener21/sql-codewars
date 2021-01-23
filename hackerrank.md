@@ -32,3 +32,7 @@ select NAME from CITY where COUNTRYCODE = 'JPN'
 WEATHER OBSERVATION STATION 1
 Query a list of CITY and STATE from the STATIOn table
 select city, state from station
+
+WEATHER OBSERVATION STATION 3
+query a lsit of city names from stations for cities that have an even ID number. print the results in any order, but exclude duplicates from the answer
+select distinct(city) from station where id%2 = 0
