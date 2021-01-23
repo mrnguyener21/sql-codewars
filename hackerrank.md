@@ -19,3 +19,7 @@ select * from city
 SELECT BY ID
 query all columns for a city in CITY with the ID 1661
 select * from city where ID = 1661
+
+JAPANESE CITIES ATTRIBUTE
+query all alltgributes of every japanese city in the CITY table. the countgrycode for Japan is JPN.
+select * from city where CountryCode = 'JPN'
