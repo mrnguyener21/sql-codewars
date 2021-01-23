@@ -165,3 +165,12 @@ Repetition in numbers may occur .
 You cannot swap the operands. For instance, in the given example you cannot get expression (1 + 3) * 2 = 8. -->
 
 <!-- select greatest(a * (b + c), a * b * c, a + b * c, (a + b) * c ) as res from expression_matter -->
+
+<!-- returning strings
+Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+
+SQL: return results in a column named greeting
+
+[Make sure you type the exact thing I wrote or the program may not execute properly] -->
+
+select 'Hello,' || name || ' how are you doing today?' as greeting from person
