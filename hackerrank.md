@@ -27,3 +27,8 @@ select * from city where CountryCode = 'JPN'
 JAPANESE CITIES NAMES
 query the names of all the japanese cities in the city table. the countrycode for japan is JPN
 select NAME from CITY where COUNTRYCODE = 'JPN'
+
+
+WEATHER OBSERVATION STATION 1
+Query a list of CITY and STATE from the STATIOn table
+select city, state from station
