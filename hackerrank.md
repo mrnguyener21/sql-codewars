@@ -11,3 +11,7 @@ Query the NAME field for all American cities in the CITY table with populations 
 
 The CITY table is described as follows:
 select Name from City where CountryCode = 'USA' and Population > 120000
+
+SELECT ALL
+Query all columns(attributes) for every row in the CITY table
+select * from city
