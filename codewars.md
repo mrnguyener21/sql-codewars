@@ -140,4 +140,5 @@ In other words , *_try every combination of a,b,c with [+()] , and return the Ma
  -->
 
 
-test
+<!-- beginner series #2 clock
+select ((s * 1000) + (m * 60000) + (h* 3600000)) as res from past -->
