@@ -54,3 +54,7 @@ query the two cities in station wtih the shortest and longest city names as well
 SELECT City, LENGTH(City) FROM (SELECT City FROM Station ORDER BY LENGTH(City), City) WHERE ROWNUM = 1;
 
 SELECT City, LENGTH(City) FROM (SELECT City FROM Station ORDER BY LENGTH(City) DESC, City) WHERE ROWNUM = 1;
+
+WEATHER OBSERVATION 6
+Query the list of city names starting with vowels from stations. your result cannot contain dupliates.
+select distinct(CITY) from station where CITY like 'A%' or CITY like 'E%' or CITY like 'I%' or CITY like'O%' or CITY like 'U%';
