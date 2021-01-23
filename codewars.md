@@ -173,4 +173,26 @@ SQL: return results in a column named greeting
 
 [Make sure you type the exact thing I wrote or the program may not execute properly] -->
 
-select 'Hello,' || name || ' how are you doing today?' as greeting from person
+<!-- select 'Hello,' || name || ' how are you doing today?' as greeting from person -->
+
+<!-- sum of odd numbers
+Given the triangle of consecutive odd numbers:
+
+             1
+          3     5
+       7     9    11
+   13    15    17    19
+21    23    25    27    29
+...
+Calculate the row sums of this triangle from the row index (starting at index 1) e.g.:
+
+rowSumOddNumbers(1); // 1
+rowSumOddNumbers(2); // 3 + 5 = 8 -->
+
+<!-- the table "nums" contains an integer "n", the number
+return your result in a column "res" -->
+<!-- SELECT POWER(n, 3)::int as res from nums;
+or
+select n*n*n as res from nums
+or 
+select(n^3)::int as res from nums; -->
