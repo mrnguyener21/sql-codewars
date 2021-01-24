@@ -69,3 +69,6 @@ WEATHER OBSERVATION STATION 8
 quyery the list of city names from station which have vowesl as both their first and last characters
 select distinct city from station where (CITY like 'A%' or CITY like 'E%' or CITY like 'I%' or CITY like'O%' or CITY like 'U%') and (city like '%a' or city like '%e' or city like '%i' or city like '%o' or city like '%u');
 
+WEATHER OBSERVATION STATION 9
+query the lsit of city names from station that do not start with vowels, no duplicates
+select distinct city from station where not (CITY like 'A%' or CITY like 'E%' or CITY like 'I%' or CITY like'O%' or CITY like 'U%');
