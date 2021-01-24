@@ -64,3 +64,8 @@ select distinct(CITY) from station where CITY like 'A%' or CITY like 'E%' or CIT
 weather observation station 7
 query the list of CITY names ending with vowels(a,e,i,o,u) from station. your result cannot contain duplicates
 select distinct(city) from station where city like '%a' or city like '%e' or city like '%i' or city like '%o' or city like '%u';
+
+WEATHER OBSERVATION STATION 8
+quyery the list of city names from station which have vowesl as both their first and last characters
+select distinct city from station where (CITY like 'A%' or CITY like 'E%' or CITY like 'I%' or CITY like'O%' or CITY like 'U%') and (city like '%a' or city like '%e' or city like '%i' or city like '%o' or city like '%u');
+
