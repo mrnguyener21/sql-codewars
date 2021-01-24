@@ -72,3 +72,7 @@ select distinct city from station where (CITY like 'A%' or CITY like 'E%' or CIT
 WEATHER OBSERVATION STATION 9
 query the lsit of city names from station that do not start with vowels, no duplicates
 select distinct city from station where not (CITY like 'A%' or CITY like 'E%' or CITY like 'I%' or CITY like'O%' or CITY like 'U%');
+
+WEATHER OBSERVATION STATION 10
+query the list of city names from station that do not end with vowels. no duplicates
+select distinct city from station where not(city like '%a' or city like '%e' or city like '%i' or city like '%o' or city like '%u');
