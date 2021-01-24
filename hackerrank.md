@@ -58,3 +58,9 @@ SELECT City, LENGTH(City) FROM (SELECT City FROM Station ORDER BY LENGTH(City) D
 WEATHER OBSERVATION 6
 Query the list of city names starting with vowels from stations. your result cannot contain dupliates.
 select distinct(CITY) from station where CITY like 'A%' or CITY like 'E%' or CITY like 'I%' or CITY like'O%' or CITY like 'U%';
+
+
+
+weather observation station 7
+query the list of CITY names ending with vowels(a,e,i,o,u) from station. your result cannot contain duplicates
+select distinct(city) from station where city like '%a' or city like '%e' or city like '%i' or city like '%o' or city like '%u';
