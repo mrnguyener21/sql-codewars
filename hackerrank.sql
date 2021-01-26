@@ -131,4 +131,4 @@ select ceiling((avg(salary) - avg(replace(salary,0,'')))) from employees
 --max total earnings is the top total earninngs or the ceiling
 --first find max earning value
 
--- SELECT (months*salary) as earnings, COUNT(*) FROM Employee GROUP BY earnings ORDER BY earnings DESC LIMIT 1;
+SELECT (months*salary) as earnings, COUNT(*) FROM Employee GROUP BY earnings ORDER BY earnings DESC LIMIT 1;
