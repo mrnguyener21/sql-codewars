@@ -85,3 +85,4 @@
 -- query the list of city names from station and do not start with vowels and do not end with vowels
 -- select distinct city from station where not (CITY like 'A%' or CITY like 'E%' or CITY like 'I%' or CITY like'O%' or CITY like 'U%') and not(city like '%a' or city like '%e' or city like '%i' or city like '%o' or city like '%u');
 
+test
