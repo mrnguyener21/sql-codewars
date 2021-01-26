@@ -96,3 +96,9 @@ select Name from STUDENTS where Marks > 75 order by substr(Name,-3),ID asc;
 -- EMPLOYEE NAMES
 -- write a query that prints a list of employee names from the Employee table in alphabetical order
 select name from employee order by name asc
+
+-- EMPLOYEE SALARIES
+-- write a query that prints a list of employee names from the employee table 
+-- for employees with a salary greater than $2000 per month who and been employees for less than 10 months
+-- sort your results by ascending employee_id
+select name from employee where salary > 2000 and months < 10 order by employee_id asc
