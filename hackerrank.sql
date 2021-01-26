@@ -102,3 +102,7 @@ select name from employee order by name asc
 -- for employees with a salary greater than $2000 per month who and been employees for less than 10 months
 -- sort your results by ascending employee_id
 select name from employee where salary > 2000 and months < 10 order by employee_id asc
+
+-- AVERAGE POULATION 
+-- query the average population for all cities in city. round down to the nearest integer
+select floor(avg(population)) from city
