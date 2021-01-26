@@ -91,3 +91,8 @@
 -- if two or more students both have names ending int he same last three characters(ex: bobby, robby, etc) secondary sort them by ascending ID
 
 select Name from STUDENTS where Marks > 75 order by substr(Name,-3),ID asc;
+
+
+-- EMPLOYEE NAMES
+-- write a query that prints a list of employee names from the Employee table in alphabetical order
+select name from employee order by name asc
