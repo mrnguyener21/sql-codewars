@@ -85,4 +85,9 @@
 -- query the list of city names from station and do not start with vowels and do not end with vowels
 -- select distinct city from station where not (CITY like 'A%' or CITY like 'E%' or CITY like 'I%' or CITY like'O%' or CITY like 'U%') and not(city like '%a' or city like '%e' or city like '%i' or city like '%o' or city like '%u');
 
-test
+-- HIGHER THAN 75 MARKS
+-- query the name of any student in STUDENTS who scored higher than 75 marks
+-- order your output by the last three characters of each name
+-- if two or more students both have names ending int he same last three characters(ex: bobby, robby, etc) secondary sort them by ascending ID
+
+select Name from STUDENTS where Marks > 75 order by substr(Name,-3),ID asc;
