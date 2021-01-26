@@ -114,3 +114,9 @@ select sum(population)from city where countrycode = 'JPN'
 -- POPULATTION DENSITY DIFFERENCE 
 -- query the difference between the maximum and minimum populations in city
 select (max(population) - min(population)) from city
+
+-- THE BLUNDER
+-- samantha wwas tasked with calculatin the average monthl salaries for all employees in the EMPLOYEES table
+-- she did not realzie her keaayboard's 0 key was broken until after completing the calculation.
+-- she wants your help finding the difference between heer miscalculation(using salaries with any zeros removed) and the actual average salary and round it up to the next integer
+select ceiling((avg(salary) - avg(replace(salary,0,'')))) from employees
