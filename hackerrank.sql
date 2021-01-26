@@ -120,3 +120,15 @@ select (max(population) - min(population)) from city
 -- she did not realzie her keaayboard's 0 key was broken until after completing the calculation.
 -- she wants your help finding the difference between heer miscalculation(using salaries with any zeros removed) and the actual average salary and round it up to the next integer
 select ceiling((avg(salary) - avg(replace(salary,0,'')))) from employees
+
+
+-- TOP EARNER
+-- we define an employee's total earningss to be their monthly salary * months worked and the max total earnings to be  the max total earnings for any mployee in the employee table
+
+-- write a query to find the max total earnings for all employees as well as the total number of emplyees who have max total earnings.then print these values as space separated integers
+
+--total earnings = salary * months
+--max total earnings is the top total earninngs or the ceiling
+--first find max earning value
+
+SELECT (months*salary) as earnings, COUNT(*) FROM Employee GROUP BY earnings ORDER BY earnings DESC LIMIT 1;
