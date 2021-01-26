@@ -106,3 +106,7 @@ select name from employee where salary > 2000 and months < 10 order by employee_
 -- AVERAGE POULATION 
 -- query the average population for all cities in city. round down to the nearest integer
 select floor(avg(population)) from city
+
+-- JAPAN POPULATION 
+-- query the sum of the populations for all japanese cities in city. country code for japan is JPN
+select sum(population)from city where countrycode = 'JPN'
