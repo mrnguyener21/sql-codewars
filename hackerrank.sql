@@ -132,3 +132,18 @@ select ceiling((avg(salary) - avg(replace(salary,0,'')))) from employees
 --first find max earning value
 
 SELECT (months*salary) as earnings, COUNT(*) FROM Employee GROUP BY earnings ORDER BY earnings DESC LIMIT 1;
+
+
+-- write a query identifying the types of each record in the triangles tabe using its three side length
+-- equiliateral = 3 sides of equal lengt
+-- isoceles = 2 sides of equal length
+--scalene = all sides are different
+-- noi a triangle = the given values of a, b and c don't form a triangle
+select 
+    case
+        when a = b and b = c then 'Equilateral'
+        when (a = b and b != c) or (a != b and b = c) then 'Isoceles'
+        when a != b and b != c then 'Scalene'
+        when a + b < c then 'Not a Triangle'
+    end as type
+from triangles
