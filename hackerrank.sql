@@ -139,11 +139,14 @@ SELECT (months*salary) as earnings, COUNT(*) FROM Employee GROUP BY earnings ORD
 -- isoceles = 2 sides of equal length
 --scalene = all sides are different
 -- noi a triangle = the given values of a, b and c don't form a triangle
-select 
-    case
-        when a = b and b = c then 'Equilateral'
-        when (a = b and b != c) or (a != b and b = c) then 'Isoceles'
-        when a != b and b != c then 'Scalene'
-        when a + b < c then 'Not a Triangle'
-    end as type
-from triangles
+SELECT CASE 
+WHEN A + B <= C OR A + C <= B OR B + C <= A THEN 'Not A Triangle' 
+WHEN A = B AND B = C THEN 'Equilateral' 
+WHEN A = B OR B = C OR A = C THEN 'Isosceles' 
+ELSE 'Scalene' 
+END 
+FROM TRIANGLES;
+
+-- REVISING AGGREGATION - THE COUNT FUNCTION
+-- query a count of the number of cities in the CITY having a population larger than 100,00
+SELECT COUNT(ID) FROM CITY WHERE POPULATION > 100000;
