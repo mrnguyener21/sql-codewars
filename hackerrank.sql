@@ -154,3 +154,7 @@ SELECT COUNT(*) FROM CITY WHERE POPULATION > 100000;
 --REVISING AGGREGATION - THE SUM FUNCTION
 -- query the total population of all cities in city where district is California
 SELECT SUM(POPULATION) FROM CITY WHERE DISTRICT = 'California';
+
+-- REVISING AGGREGATIONS - AVERAGES
+-- query the average of all cities in city where district in California
+select avg(population) from city where district = 'California';
