@@ -158,3 +158,11 @@ SELECT SUM(POPULATION) FROM CITY WHERE DISTRICT = 'California';
 -- REVISING AGGREGATIONS - AVERAGES
 -- query the average of all cities in city where district in California
 select avg(population) from city where district = 'California';
+
+--TOP EARNER
+--we define an employee's total earnings to be their monthly salary x months worked and the maximum total earnings to be the maximum total earnings for any employee in the employee table
+--write a query to find the maximum total earnings for all employees as well as the total number of employees who have maximum total earnings. then print these values as 2 spaced separated integers
+--GOAL
+    --find maximum total earnings
+    --find out how many people have are making that much
+    select salary * months as earning from employee group by (salary * month) order by (salary * month) desc limit 1
