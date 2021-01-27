@@ -172,3 +172,7 @@ select salary * months as earning, count(*) from employee group by earning order
 --The sum of all values in LAT_N rounded to a scale of 2 decimal places
 --The sum of all values in LONG_W rounded to a scale of 2 decimal places
 select round(sum(LAT_N),2), round(sum(LONG_W),2) from station;
+
+--WEATHER OBSERVATION STATION 13
+--Query the sum of LAT_N from station having values greater than 38.7880 and less than 137.2345. Truncate your answer to 4 decimal places
+select round(sum(LAT_N),4) from STATION where LAT_N > 38.7880 and LAT_N < 137.2345;
