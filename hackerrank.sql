@@ -165,4 +165,10 @@ select avg(population) from city where district = 'California';
 --GOAL
     --find maximum total earnings
     --find out how many people have are making that much
-    select salary * months as earning from employee group by (salary * month) order by (salary * month) desc limit 1
+select salary * months as earning, count(*) from employee group by earning order by earning desc limit 1;
+
+--Weather Observation Station 2
+--Query the following two values from the station table:
+--The sum of all values in LAT_N rounded to a scale of 2 decimal places
+--The sum of all values in LONG_W rounded to a scale of 2 decimal places
+select round(sum(LAT_N),2), round(sum(LONG_W),2) from station;
