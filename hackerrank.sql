@@ -176,3 +176,7 @@ select round(sum(LAT_N),2), round(sum(LONG_W),2) from station;
 --WEATHER OBSERVATION STATION 13
 --Query the sum of LAT_N from station having values greater than 38.7880 and less than 137.2345. Truncate your answer to 4 decimal places
 select round(sum(LAT_N),4) from STATION where LAT_N > 38.7880 and LAT_N < 137.2345;
+
+--WEATHER OBSERVATION STATION 14
+--query the greatest  value of LAT_N from station that is less than 137.2345. truncate your answer to 4 decimal places
+select round(max(LAT_N),4) from station where LAT_N < 137.2345;
