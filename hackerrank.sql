@@ -194,3 +194,5 @@ select min(round(lat_n)) from station where lat_n > 38.7780;
 select round(long_w,4) from (select * from station where lat_n > 38.7780 order by lat_n asc) where rownum <2;
 
 
+--weather observation station 18
+select round((max(lat_n) - min(lat_n)) + (max(long_w) - min(long_w)),4) from station
