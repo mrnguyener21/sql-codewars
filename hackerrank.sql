@@ -188,3 +188,9 @@ select round(long_w,4) from (select * from station where lat_n < 137.2345 order 
 --WEATHER OBSERVATION STATION 16
 --query the smallest lat_n from station that is greater than 38.7780. round your answer to 4 decimals.
 select min(round(lat_n)) from station where lat_n > 38.7780;
+
+--WEATHER OBSERVATION STATION 17
+--query the long w where the smallest lat_n is greater than 38.7780. round your ansewr to 4 decimal places.
+select round(long_w,4) from (select * from station where lat_n > 38.7780 order by lat_n asc) where rownum <2;
+
+
