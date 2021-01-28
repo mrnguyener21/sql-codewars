@@ -84,3 +84,24 @@ select distinct city from station where not((city like 'A%' or city like 'E%' or
 WEATHER OBSERVATION STATION 12
 query the list of city names from station and do not start with vowels and do not end with vowels
 select distinct city from station where not (CITY like 'A%' or CITY like 'E%' or CITY like 'I%' or CITY like'O%' or CITY like 'U%') and not(city like '%a' or city like '%e' or city like '%i' or city like '%o' or city like '%u');
+
+HIGHER THAN 75 MARKS
+Query the Name of any student in STUDENTS who scored higher than  Marks. Order your output by the last three characters of each name. If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending ID.
+
+Input Format
+
+The STUDENTS table is described as follows:  The Name column only contains uppercase (A-Z) and lowercase (a-z) letters.
+
+Sample Input
+
+
+
+Sample Output
+
+Ashley
+Julia
+Belvet
+Explanation
+
+Only Ashley, Julia, and Belvet have Marks > . If you look at the last three characters of each of their names, there are no duplicates and 'ley' < 'lia' < 'vet'.
+
