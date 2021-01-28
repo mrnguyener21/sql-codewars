@@ -201,3 +201,13 @@ select round((max(lat_n) - min(lat_n)) + (max(long_w) - min(long_w)),4) from sta
 -- Given the city and country table, query the sum of the populations of all cities where the continent is 'Asia'
 --note: city.countrycode and country.code are the matching key columns
 select sum(city.population) from city join country on city.countrycode = country.code where continent = 'Asia';
+
+--AFRICIAN CITIES
+--Given the city and country table query the names of all cities where the continent is 'Africa'
+--note city.countrycode and country.code are matching keys
+select city.name from city join country on city.countrycode = country.code where continent = 'Africa';
+
+--AVERAGE POPULATION OF EACH CONTINENT
+--given the city and country tables, query the names of all the continents(country.continent) and their respective average city populations(city.population) rounded down to the nearest integer.
+-- city.countrycode and country.code are matching key columns 
+select country.continent, round(avg(city.population)) from country join city on country.code = city.countrycode;
