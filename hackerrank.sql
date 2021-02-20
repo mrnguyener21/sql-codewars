@@ -197,6 +197,7 @@ select round(long_w,4) from (select * from station where lat_n > 38.7780 order b
 --weather observation station 18
 select round((max(lat_n) - min(lat_n)) + (max(long_w) - min(long_w)),4) from station
 
+<<<<<<< HEAD
 -- THE PADS --
 --1)Quuery an alpahebtically ordered list of all names in OCCUPATIONS. Immediately followed by the first leter of each profession as a parenthical.
 --2) Query the numer of ocurrences of each occupation in OCCUPATIONS. Sort the occurrences in ascending order, and output them in the following format
@@ -205,3 +206,19 @@ select round((max(lat_n) - min(lat_n)) + (max(long_w) - min(long_w)),4) from sta
 --first query
 select name || '(' || substr(occupation,0,1) || ')' from occupations order by name;
 select 'There are a total of ' || count(*) ||' '|| lower(occupation) ||'s.' from occupations group by occupation order by count(*), occupation;
+=======
+--ASIAN POPULATION
+-- Given the city and country table, query the sum of the populations of all cities where the continent is 'Asia'
+--note: city.countrycode and country.code are the matching key columns
+select sum(city.population) from city join country on city.countrycode = country.code where continent = 'Asia';
+
+--AFRICIAN CITIES
+--Given the city and country table query the names of all cities where the continent is 'Africa'
+--note city.countrycode and country.code are matching keys
+select city.name from city join country on city.countrycode = country.code where continent = 'Africa';
+
+--AVERAGE POPULATION OF EACH CONTINENT
+--given the city and country tables, query the names of all the continents(country.continent) and their respective average city populations(city.population) rounded down to the nearest integer.
+-- city.countrycode and country.code are matching key columns 
+select country.continent, round(avg(city.population)) from country join city on country.code = city.countrycode;
+>>>>>>> 9eb555fc42cdd482b72dc00b92fc3e597d5e46cd
