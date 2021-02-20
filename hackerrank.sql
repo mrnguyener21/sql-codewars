@@ -196,3 +196,12 @@ select round(long_w,4) from (select * from station where lat_n > 38.7780 order b
 
 --weather observation station 18
 select round((max(lat_n) - min(lat_n)) + (max(long_w) - min(long_w)),4) from station
+
+-- THE PADS --
+--1)Quuery an alpahebtically ordered list of all names in OCCUPATIONS. Immediately followed by the first leter of each profession as a parenthical.
+--2) Query the numer of ocurrences of each occupation in OCCUPATIONS. Sort the occurrences in ascending order, and output them in the following format
+    --There a toal of [occupation_count] [occupation]s.
+
+--first query
+select name || '(' || substr(occupation,0,1) || ')' from occupations order by name;
+select 'There are a total of ' || count(*) ||' '|| lower(occupation) ||'s.' from occupations group by occupation order by count(*), occupation;
