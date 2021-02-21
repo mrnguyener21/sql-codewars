@@ -205,3 +205,8 @@ select round((max(lat_n) - min(lat_n)) + (max(long_w) - min(long_w)),4) from sta
 --first query
 select name || '(' || substr(occupation,0,1) || ')' from occupations order by name;
 select 'There are a total of ' || count(*) ||' '|| lower(occupation) ||'s.' from occupations group by occupation order by count(*), occupation;
+
+--OCCPUATIONS ---
+--pivot the occupation column in OCCUPATIONS so that each name is sorted alphabetically and displayed underneath its corresponding occupation. the output column headers should be Doctor, Professor, Singer, and Actor respectively.
+--NOTE: Print NULL when there are no more names corresponding to an occupation.
+--QUICK EXPLANATION:
