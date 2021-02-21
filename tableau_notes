@@ -1,0 +1,10 @@
+--SECTION 2 ----
+-NAVIGATION TABLEAU
+dimensions are independent variables VS measures are dependent variables
+what we create in tableau is considered a worksheet
+dashboard = collection of worksheets
+story = collection of dashbaords
+worksheet mainly created by deciding what goes into columns and rows
+-CREATING CALCULATED FIELDS
+-right click under measures-create calculated field 
+-calculated fields will have a little equal sign to the right of it within the measure names section
