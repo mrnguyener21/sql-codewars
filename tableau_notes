@@ -8,3 +8,8 @@ worksheet mainly created by deciding what goes into columns and rows
 -CREATING CALCULATED FIELDS
 -right click under measures-create calculated field 
 -calculated fields will have a little equal sign to the right of it within the measure names section
+-ADDING COLORS
+-data science is a form of art so color is important lol
+-you can drag dimensions into the column box to give them individual colors
+-ADDING LABELS AND FORMATING
+-format labels to make it quick and easy for people to read the charge
