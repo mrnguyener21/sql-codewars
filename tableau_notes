@@ -29,3 +29,6 @@ when using tableau public it is always an extract of the data already vs live
 
 --Understanding Aggregation, granularity and level of detail--
 -level of granularity refers to how much visibility you want aka how many points shown/measured
+
+--Creating an Area chart and learning about highlighting
+-go to your legend, right click on which item you want highlighted and click highlight selected only(something like that)
