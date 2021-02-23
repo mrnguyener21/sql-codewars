@@ -17,3 +17,6 @@ worksheet mainly created by deciding what goes into columns and rows
 ---SECTION 3---
 -Working with Extracts-
 when using tableau public it is always an extract of the data already vs live
+--Working with TIme Series
+-dimensions are in blue and measures are in green
+-understand what we want from data with time series, do we want it as a dimension or measure so tableau can properly display the data
