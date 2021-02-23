@@ -265,3 +265,29 @@ and p.col = s.col
 and s.col = a.col
 and not (d.doc is null and p.prof is null and s.singr is null and a.actr is null)
 ;
+--below is another solution, alot simpler most of it makes more sense off the bat
+select
+--here he is selecting the columns being created from the subtable below
+    Doctor
+    ,Professor
+    ,Singer
+    ,Actor
+from (
+select
+    NameOrder
+    ,max(case Occupation when 'Doctor' then Name end) as Doctor
+    ,max(case Occupation when 'Professor' then Name end) as Professor
+    ,max(case Occupation when 'Singer' then Name end) as Singer
+    ,max(case Occupation when 'Actor' then Name end) as Actor
+from (
+    -- #This was probably his starting point and he worked his way backwards
+    select
+        Occupation
+        ,Name
+        --wtf is this row number function
+        ,row_number() over(partition by Occupation order by Name ASC) as NameOrder
+    from Occupations
+    ) as NameLists
+    --did group by nameorder to create the actual pivot
+    group by NameOrder
+) as Names
