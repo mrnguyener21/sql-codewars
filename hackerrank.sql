@@ -224,3 +224,9 @@ select 'There are a total of ' || count(*) ||' '|| lower(occupation) ||'s.' from
 --first query is name(first letter of occupation)
 select name || '(' || substr(occupation,1,1) || ')' from occupations order by name;
 select 'There are a total of '||count(*)||' '||lower(occupation)||'s.' from occupations group by occupation order by count(*),occupation;
+
+
+--OCCUPATIONS--
+-- pivot hte occupatuion column in occupations so that each name is sorted alphabetically and displayed undernearth its corresponding occupation.
+--The output column headers should be doctor, professor, singer, and actor respectively
+--NOTE: print NULL when there are no more names corresponding to an occupation
