@@ -242,19 +242,24 @@ select 'There are a total of '||count(*)||' '||lower(occupation)||'s.' from occu
 Enter your query here.
 Please append a semicolon ";" at the end of the query and enter your query in a single line to avoid error.
 */
+--wtf is a with clause
 with subquery as (
+    -- subquery i guess is him creating a table? and in it contains the case
+    --below 
 select  case when o.occupation = 'Doctor' then o.name else null end as doc,
         case when o.occupation = 'Professor' then o.name else null end prof,
         case when o.occupation = 'Singer' then o.name else null end singr,
         case when o.occupation = 'Actor' then o.name else null end actr
-from Occupations o
+from Occupations o --he set the occupations table as o probably to just make it easier to reference
 ) 
 select d.doc, p.prof, s.singr, a.actr
 from
+-- I don't get this part. I'm assuming he's using this in order to create the columns along with the appropriate naming and order of the clumns, but I don't understand the code as to how it works to make it happen
 (select row_number() over (order by x.doc asc) col, x.doc from subquery x) d,
 (select row_number() over (order by x.prof asc) col, x.prof from subquery x) p,
 (select row_number() over (order by x.singr asc) col, x.singr from subquery x) s,
 (select row_number() over (order by x.actr asc) col, x.actr from subquery x) a
+--I don't get this last bit at all
 where d.col = p.col
 and p.col = s.col
 and s.col = a.col
