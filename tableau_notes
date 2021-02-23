@@ -32,3 +32,8 @@ when using tableau public it is always an extract of the data already vs live
 
 --Creating an Area chart and learning about highlighting
 -go to your legend, right click on which item you want highlighted and click highlight selected only(something like that)
+
+--Adding a Filter and Quick Filter--
+-just drag what you want into the filter box to use the filter
+-under filter right click and choose show quick filter to have quick filter box(acts like highlighting where you can click on each different filter to quickly see the differences between the data)
+    -if you have multiple filters you would have to do this each time so each filter can have its own quick filter box
