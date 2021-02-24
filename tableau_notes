@@ -37,3 +37,15 @@ when using tableau public it is always an extract of the data already vs live
 -just drag what you want into the filter box to use the filter
 -under filter right click and choose show quick filter to have quick filter box(acts like highlighting where you can click on each different filter to quickly see the differences between the data)
     -if you have multiple filters you would have to do this each time so each filter can have its own quick filter box
+
+--Section 3 Quiz --
+What you knowThese are questions you got right on the first try.
+Which of these is a valid reason to use a Data Extract over a Live Connection to the Dataset in Tableau?
+What is the difference between the Blue Month() and the Green Month() in Tableau?
+Which of these explains the conceptual difference between a line chart and an area chart?
+What you should review
+How does Tableau know at which level to aggregate values?
+Lecture 21 Understanding Aggregation, Granularity, and Level of Detail
+
+Which of these is NOT a type of Quick Filter available in Tableau?
+Lecture 23 Adding a Filter and Quick Filter
