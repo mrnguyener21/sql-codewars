@@ -320,3 +320,65 @@ end
 from bst
 order by n;
 -- I FAILED BECAUSE I WAS OVER THINKING HOW TO RIGHT IT
+
+--NEW COMPANIES --
+-- Amber's conglomerate corporation just acquired some new companies. Each of the companies follows this hierarchy: 
+-- founder -> lead manager -> senior Manager -> employee
+
+-- write a query to print the 
+-- company_code, 
+-- founder name, 
+-- total number of lead managers, count function
+-- total number ofsenior managers, count function
+-- total number of managers,count function
+-- total number of employees count function
+-- order output by ascending company code order by company_code asc;
+
+--We're gonna have to join the tables below and then query
+--Company Table
+    -- company_code
+    --founder NEED IT
+--Lead_manager Table
+    -- lead_manger_code
+    -- company_code
+--Senior_Manger Table
+    --senior_manger_code
+    --lead_manager_code
+    --company_code
+--Manger Table
+    --manager_code NEED IT
+    --senior_manager_code NEED IT
+    --lead_mangaer_code NEED IT
+    --company_code - NEED IT
+-- Employee Table
+    --employee_code NEED IT
+    --manager_code
+    --senior_manager_code
+    --lead_manager_code
+    --COMPANY CODE
+
+--Step 1 Join tables(COMPANY TABLE,  EMPLOYEE TABLE)
+    --COMPANY TABLE = FOUNDER COLUMN
+    --EMPLOYEE TABLE = EMPLOYEE CODE
+
+    --CONNECT COMPANY TABLE TO MANAGER TABLE ON COMPANY CODE
+--Step 2
+-- write a query to print the 
+-- company_code, 
+-- founder name, 
+-- total number of lead managers, count function for lead_manager_code
+-- total number ofsenior managers, count function
+-- total number of managers,count function
+-- total number of employees count function
+
+--Below is the code I came up with by the time limit and failed the challenge
+select cc, f, count(lc),count(sc),count(mc),count(ec)
+from(
+SELECT employee.employee_code as ec, employee.manager_code as mc,employee.senior_manager_code as smc,employee.lead_manager_code as lmc,employee.company_code as cc, company.founder as f
+from employee
+inner join company on company.company_code = employee.company_code
+)
+order by company_code asc;
+
+--below is the error 
+ERROR 1248 (42000) at line 1: Every derived table must have its own alias
