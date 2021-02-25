@@ -52,8 +52,15 @@ Lecture 23 Adding a Filter and Quick Filter
 
 ---SECTION 4 ---
 --Joining Data in tableau --
+In tableau each row of data will have a symbol next to it to show what type of data tableau recognizes it as 
+    -ex: abc is text a calendar is date and a globe is map
 in the page after you open up an excel file drag your first sheet over and then double clicking it
 after double clciking it you can then drag over another sheet to it to create a join with it rather than a relationship
 
 --Creating a map, working with hierarchies--
 - To create a hierarchy just drag what you deem is a child to the parent to create a hierarchy sectiopn and from there conitnue adding to it
+-a map can be made using data ctagorized with the globe symbol
+
+--Creating a scatter plot, Applying filters to multiple worksheets
+-To apply the same filter to every worksheet right click on the filter in a worksheet that is currently using it, go to apply to worksheets and then all using this data source
+
