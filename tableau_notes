@@ -49,3 +49,11 @@ Lecture 21 Understanding Aggregation, Granularity, and Level of Detail
 
 Which of these is NOT a type of Quick Filter available in Tableau?
 Lecture 23 Adding a Filter and Quick Filter
+
+---SECTION 4 ---
+--Joining Data in tableau --
+in the page after you open up an excel file drag your first sheet over and then double clicking it
+after double clciking it you can then drag over another sheet to it to create a join with it rather than a relationship
+
+--Creating a map, working with hierarchies--
+- To create a hierarchy just drag what you deem is a child to the parent to create a hierarchy sectiopn and from there conitnue adding to it
