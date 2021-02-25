@@ -284,10 +284,39 @@ from (
     select
         Occupation
         ,Name
-        --wtf is this row number function
+        --wtf is this row number function and partition by
         ,row_number() over(partition by Occupation order by Name ASC) as NameOrder
     from Occupations
     ) as NameLists
     --did group by nameorder to create the actual pivot
     group by NameOrder
 ) as Names
+
+--BINARY TREE NODES
+--You are given a table, BST, containing 2 columns: N & P, where N represents the value of a node in Binary Tree and P is the parent of N.
+--Write a query to find the node type of Binary Tree ordered by the value of the node. Output one of the following for each node:
+--root: if node is root node
+--leaf: if node is leaf node
+--Inner: if node is neither root nor leaf node
+--MY ANALYSIS
+    --based on the sample data and the sample
+    --If values are only in N, then they are a leaf
+    --if values are in both N and P and they have a corresponding P value they are an inner
+    --if value is in both N and P and their corresponding P value is null then they are the root
+--I couldn't figure out how to go about writing the code
+select *,
+case
+    when N not exists in P then 'Leaf'
+    when N exist in P and 
+
+from BST order by P asc;
+--BELOW IS A SOLUTION
+select n,
+case 
+    when p is null then 'Root'
+    when n in (select p from bst) then 'Inner' --I kept thinking I had to do some crazy comparison with the same tbale when I could've just compared it to a subquery pulling the entire p column so that I can compare the current n value to all of the p values
+    else 'Leaf'
+end
+from bst
+order by n;
+-- I FAILED BECAUSE I WAS OVER THINKING HOW TO RIGHT IT
