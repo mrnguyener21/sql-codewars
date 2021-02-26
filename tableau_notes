@@ -67,3 +67,7 @@ after double clciking it you can then drag over another sheet to it to create a 
 -Lets create our first dashboard--
 click the square icon in the are where the sheets are to create a new dashboard 
 very useful to look at multiple correlating sheets and see the changes between all of them in real time
+
+--Adding an Interaction Action - Filter --
+- go to dashboard(at the top), click action and go from there
+-when selecting, you can actually move many by holding control while clicking or by using the select feature(it's the triangle play button logo)
