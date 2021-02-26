@@ -71,3 +71,6 @@ very useful to look at multiple correlating sheets and see the changes between a
 --Adding an Interaction Action - Filter --
 - go to dashboard(at the top), click action and go from there
 -when selecting, you can actually move many by holding control while clicking or by using the select feature(it's the triangle play button logo)
+
+--Adding an Interaction Action - Highlighting --
+--highlighting is different from filtering with interaction action in dashboard as filtering actually FILTERS the data so you can reconstruct  where as with highlighting there is no filtering happening. With highlighting you are asking to plot everything while still showing the data that correlates to the highlight
