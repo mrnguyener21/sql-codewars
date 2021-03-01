@@ -79,3 +79,7 @@ very useful to look at multiple correlating sheets and see the changes between a
 ----SECTION 5 ----
 --Understanding How Left Right Inner and Outer Join Works--
 -good review -
+
+--Joins with Duplicate Values--
+-What happens when the column we use has duplicate values
+    -the single value matchign to duplicates will get duplicate to line up the data corrrectly
