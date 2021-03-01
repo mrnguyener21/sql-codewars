@@ -83,3 +83,7 @@ very useful to look at multiple correlating sheets and see the changes between a
 --Joins with Duplicate Values--
 -What happens when the column we use has duplicate values
     -the single value matchign to duplicates will get duplicate to line up the data corrrectly
+
+--Joining on Multiple Fields --
+-joining on a single field can lead to incorrect results sometime so adding an additional field can help avoid that error
+    -ex: two stores being joined on order# can make it look like you sold two items in both locations because there's only one field to join but if you add in the store field as well there will be a distinction with items sold
