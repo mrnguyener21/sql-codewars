@@ -87,3 +87,7 @@ very useful to look at multiple correlating sheets and see the changes between a
 --Joining on Multiple Fields --
 -joining on a single field can lead to incorrect results sometime so adding an additional field can help avoid that error
     -ex: two stores being joined on order# can make it look like you sold two items in both locations because there's only one field to join but if you add in the store field as well there will be a distinction with items sold
+
+--The showdown: Joining Data vs Blending Data in Tableau --
+- When lvl of granularity is different between two tables a blend is required instead of a join
+-ALso when you are not able to do a join because the data sources are different
