@@ -91,3 +91,9 @@ very useful to look at multiple correlating sheets and see the changes between a
 --The showdown: Joining Data vs Blending Data in Tableau --
 - When lvl of granularity is different between two tables a blend is required instead of a join
 -ALso when you are not able to do a join because the data sources are different
+
+--Data Blending in tableau --
+-Data blending often underestimated
+-When tableau is prepare to blend the data between two data sets you'll see an orane line on the left and an orange link symbol next to one of the dimensions
+-Data blending is like a 'smart' join
+-To add additional joins to the blend go to data(at the tip ribbon) edit blend relationship
