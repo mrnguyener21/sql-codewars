@@ -101,3 +101,7 @@ very useful to look at multiple correlating sheets and see the changes between a
 --Dual Axis Chart--
 -The order of how you blend the data matters when going the custom route
 -When you create a dual axis go to the axis right click AND CLICK SYNCHRONIZE AXIS VERY IMORTANT
+
+--Creating calculated fields in a blend(advance topic) --
+-This section is learning to create a calculated field with items  from both sets of data 
+-Be aware of when trying to create a calculated field between a field that is aggregrated and one non aggregated. Best way to solve this issue is to add the sum of value to the non aggregated to make it aggregated
