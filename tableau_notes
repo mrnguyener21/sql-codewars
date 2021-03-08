@@ -112,3 +112,5 @@ very useful to look at multiple correlating sheets and see the changes between a
 --Mapping: How to set geographical roles--
 -To change a dimension into a geographical role(get that globe icon so tableau can instinctively create a map for us) right click on the dimension, go to geographical role and then choose according
 
+--Creating Tableau Calculationos for Gender--
+-Go to the field you wish to do the calculation(ex changing the numbers to percentage of total), right click to open the drop down and go to edit table calculations. If you see a triangle next to it afterwards it indiciates that the table calculation has been implemented for that field
