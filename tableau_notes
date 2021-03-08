@@ -105,3 +105,10 @@ very useful to look at multiple correlating sheets and see the changes between a
 --Creating calculated fields in a blend(advance topic) --
 -This section is learning to create a calculated field with items  from both sets of data 
 -Be aware of when trying to create a calculated field between a field that is aggregrated and one non aggregated. Best way to solve this issue is to add the sum of value to the non aggregated to make it aggregated
+
+
+
+---SECTION 6----
+--Mapping: How to set geographical roles--
+-To change a dimension into a geographical role(get that globe icon so tableau can instinctively create a map for us) right click on the dimension, go to geographical role and then choose according
+
