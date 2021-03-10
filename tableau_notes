@@ -114,3 +114,7 @@ very useful to look at multiple correlating sheets and see the changes between a
 
 --Creating Tableau Calculationos for Gender--
 -Go to the field you wish to do the calculation(ex changing the numbers to percentage of total), right click to open the drop down and go to edit table calculations. If you see a triangle next to it afterwards it indiciates that the table calculation has been implemented for that field
+
+--Creating Bins and Distributions for Age--
+-To create a bin go to a numerical measure, right click, create and then bin
+-With bin you are able to turn the numerical measure into a dimension where it can be categorized based on a metric of your own choosing(by 5, by 3, by 1 etc)
