@@ -123,3 +123,5 @@ very useful to look at multiple correlating sheets and see the changes between a
 -To create a parameter, right click in the measure area and choose create parameter. From there input the criteria you want your parameter to be and the style of the parameter to which you can control it
 -After words you will have to link the parameter to the dimension(s) you want it to affect. To do that right click on the dimension you want it to affect, go to edit, and under 'size of bins' choose the parameter you've created
 
+--How to Create a Tree Map Chart--
+-it's under show me-
