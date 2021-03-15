@@ -126,4 +126,6 @@ very useful to look at multiple correlating sheets and see the changes between a
 --How to Create a Tree Map Chart--
 -it's under show me-
 
---Creating a cUstomer Segmentation Dashbaord--
+--Advance Dashboard Interactivity--
+-You can click on one of your charts on the dashboard to show more options for it and then go to 'use as filter' so then based on what you filter for that chart it will then affect the other charts appropriately based on it
+-To get rid of the "popup" box when you hover over certain sections of a chart go to worksheet at the top, tool tip and unclick the box for show tool tip. You'll have to do this for each chart
