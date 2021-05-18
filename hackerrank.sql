@@ -417,3 +417,7 @@ WHERE COUNTRYCODE = 'USA' AND POPULATION >120000;
 --SELECT ALL--
 --Query all olumns(attributes) for every row in the city table
 select * from city
+
+--SELECT BY ID--
+--Query all columns fora city in the CITY with the ID 1661;
+select * from city where ID = 1661;
