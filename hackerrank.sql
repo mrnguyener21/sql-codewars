@@ -382,3 +382,29 @@ order by company_code asc;
 
 --below is the error 
 ERROR 1248 (42000) at line 1: Every derived table must have its own alias
+
+--below is a correct answer
+SELECT c.company_code,c.founder,
+count(distinct lm.lead_manager_code),
+count(distinct sm.senior_manager_code),
+count(distinct m.manager_code), 
+count(distinct e.employee_code)
+--Is it because we are pulling individual columns from separate tables that we do not need to join them into one table first
+--Here he's doing a "simpler join" along with using the where function to determine the columns that match to line up the data
+--if this was the case then can't we just still use company table and employee table?
+FROM Company c, Lead_Manager lm, Senior_Manager sm, Manager m, Employee e
+WHERE
+c.company_code=lm.company_code AND
+lm.lead_manager_code=sm.lead_manager_code AND
+sm.senior_manager_code=m.senior_manager_code AND
+m.manager_code=e.manager_code
+--assuming we need group by in order to get the data organized by company code and founder
+GROUP BY c.company_code,c.founder
+ORDER BY c.company_code ASC
+
+
+
+--Revising the Select Query 1--
+--Query all columns for all American cities in the CITY table with populations larger than 100,000. The CountryCode for America is USA
+
+select * from CITY where CountryCode = 'USA' and Population > 100000;
