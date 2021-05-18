@@ -408,3 +408,12 @@ ORDER BY c.company_code ASC
 --Query all columns for all American cities in the CITY table with populations larger than 100,000. The CountryCode for America is USA
 
 select * from CITY where CountryCode = 'USA' and Population > 100000;
+
+--Revising the Select Query 2--
+--Query the NAME field for all American cities in the CITY table with populations larger than 120,000.
+select NAME from CITY
+WHERE COUNTRYCODE = 'USA' AND POPULATION >120000;
+
+--SELECT ALL--
+--Query all olumns(attributes) for every row in the city table
+select * from city
