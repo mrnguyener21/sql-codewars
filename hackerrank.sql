@@ -465,3 +465,8 @@ lower(substr(city,-1,1)) = 'u' ;
 select distinct city from station 
 where (CITY like 'A%' or CITY like 'E%' or CITY like 'I%' or CITY like'O%' or CITY like 'U%') 
 and (city like '%a' or city like '%e' or city like '%i' or city like '%o' or city like '%u');
+
+--weather observation station 9--
+--query the list of city names from station that do not start with vowels. your result cannot contain duplicates
+select distinct city from station 
+where NOT(CITY like 'A%' or CITY like 'E%' or CITY like 'I%' or CITY like'O%' or CITY like 'U%');
