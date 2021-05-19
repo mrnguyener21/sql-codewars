@@ -425,3 +425,7 @@ select * from city where ID = 1661;
 --Japanese Cities' Attributes' --
 --Query all attributes of every Japanese City in the CITY table. The COUNTRY CODE for japan is JPN
 select * from CITY where COUNTRYCODE='JPN';
+
+--Japanese Cities Names'--
+--Query the names of all the jaapnese cities in the city table
+select name from city where countrycode='JPN';
