@@ -437,3 +437,16 @@ select city, state from station;
 --weather observation station 3 --
 --query a list of CITY names from STATION for cities that have an even ID number. Print the results in any order, but exclude duplicates from the answer
 select distinct(city) from station where MOD(ID,2)=0;
+
+--weather observation station 4--
+--find the difference between the totla number of city entries in the table and the number of distinct city entries in the table
+select (count(city) - count(distinct(city))) from station;
+
+--weather observation station 6 --
+--query the list of city names starting with vowels from station
+select distinct city  from station 
+where lower(substr(city,1,1)) = 'a' or
+lower(substr(city,1,1)) = 'e' or
+lower(substr(city,1,1)) = 'i' or
+lower(substr(city,1,1)) = 'o' or
+lower(substr(city,1,1)) = 'u';
