@@ -429,3 +429,7 @@ select * from CITY where COUNTRYCODE='JPN';
 --Japanese Cities Names'--
 --Query the names of all the jaapnese cities in the city table
 select name from city where countrycode='JPN';
+
+--weather observation station 1--
+--query a list of city and state from the station table
+select city, state from station;
