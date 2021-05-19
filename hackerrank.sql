@@ -450,3 +450,12 @@ lower(substr(city,1,1)) = 'e' or
 lower(substr(city,1,1)) = 'i' or
 lower(substr(city,1,1)) = 'o' or
 lower(substr(city,1,1)) = 'u';
+
+--weather observation station 7 --
+--Query the list of city names ending with vowels (a,e,i,o,u) from station. your result cannot contain duplicates
+select distinct city  from station 
+where lower(substr(city,-1,1)) = 'a' or
+lower(substr(city,-1,1)) = 'e' or
+lower(substr(city,-1,1)) = 'i' or
+lower(substr(city,-1,1)) = 'o' or
+lower(substr(city,-1,1)) = 'u';
