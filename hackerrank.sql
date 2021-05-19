@@ -458,4 +458,10 @@ where lower(substr(city,-1,1)) = 'a' or
 lower(substr(city,-1,1)) = 'e' or
 lower(substr(city,-1,1)) = 'i' or
 lower(substr(city,-1,1)) = 'o' or
-lower(substr(city,-1,1)) = 'u';
+lower(substr(city,-1,1)) = 'u' ;
+
+--weather observation station 8--
+--query the listof city names from station which have vowels as both their first and last characters. your result cannot contain duplicates
+select distinct city from station 
+where (CITY like 'A%' or CITY like 'E%' or CITY like 'I%' or CITY like'O%' or CITY like 'U%') 
+and (city like '%a' or city like '%e' or city like '%i' or city like '%o' or city like '%u');
