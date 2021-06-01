@@ -500,3 +500,9 @@ order by substr(Name,-3), ID asc;
 --Employee Names
 --Write a function that prints a list of employee names from the employee table in alpahebtical order.
 select name from employee order by name asc;
+
+--Employee salaries 
+--write a query that prints a list of meployee names for employees in Employee having a salary greater than $2000/month, been employed for less than 10 months. sort results by ascending employee_id
+select name from employee
+where salary > 2000 and months <10
+order by employee_id asc;
