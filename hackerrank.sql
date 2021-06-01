@@ -496,3 +496,7 @@ not(city like '%a' or city like '%e' or city like '%i' or city like '%o' or city
 select Name from students
 where Marks > 75
 order by substr(Name,-3), ID asc;
+
+--Employee Names
+--Write a function that prints a list of employee names from the employee table in alpahebtical order.
+select name from employee order by name asc;
