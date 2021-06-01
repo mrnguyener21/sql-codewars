@@ -489,4 +489,10 @@ select distinct city from station
 where not(city like 'A%' or city like 'E%' or city like 'I%' or city like 'O%' or city like 'U%') and
 not(city like '%a' or city like '%e' or city like '%i' or city like '%o' or city like '%u');
 
---tests
+--higher than 75 marks--
+--query the name of any stduent in STUDENTS who scared higher than 75 marks. 
+--order your output by the last three characters of each name. 
+--If two or more students have both the same names ending in the same last three characters, secondary sort them by ascending ID.
+select Name from students
+where Marks > 75
+order by substr(Name,-3), ID asc;
