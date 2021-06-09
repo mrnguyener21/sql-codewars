@@ -506,3 +506,17 @@ select name from employee order by name asc;
 select name from employee
 where salary > 2000 and months <10
 order by employee_id asc;
+
+--TYPE OF TRIANGLE
+--Write a query identifying the type of each record in the TRIANGLES Table using its three side length
+--Equilaeral: with 3 sides of equal length
+--Isosceles: 2 sides of equal length
+-- Scalene: 3 sides with differnet length
+--Not a Triangle: The given values of A, B and C don't form a triangle(combined value of two sides must not be larger than a single side)
+SELECT CASE 
+WHEN A + B <= C OR A + C <= B OR B + C <= A THEN 'Not A Triangle' 
+WHEN A = B AND B = C THEN 'Equilateral' 
+WHEN A = B OR B = C OR A = C THEN 'Isosceles' 
+ELSE 'Scalene' 
+END 
+FROM TRIANGLES;
