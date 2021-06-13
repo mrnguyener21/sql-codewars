@@ -553,3 +553,15 @@ select (max(population) - min(population)) from city;
 --She wants your help finding the difference between her miscalculation(using salaries with any zeros removed) and the actual average salary
 --write a query calculating the amount of error and round it up to the nextr inteeger
 select ceil((avg(salary) - avg(replace(salary,0,'')))) from employees
+
+
+--Top Earners
+--We define an employee's top earnings to be their monthly salary x months worked and the maximum total earnings to be the maximum total earnings for any employee in the employee table.
+--write a query to find the maximum total earnings for all employees as well as the total number of employees who have maximum total earnings. Then Print these values as 2 space-separated integers.
+
+-- We want to find maximum total earnings
+select earnings, count(employee_id) from (
+select employee_id, (salary * months) earnings from employee
+    where (salary * months) in (
+    select max(salary * months) from employee)
+)group by earnings;
