@@ -520,3 +520,9 @@ WHEN A = B OR B = C OR A = C THEN 'Isosceles'
 ELSE 'Scalene' 
 END 
 FROM TRIANGLES;
+
+
+--Revising Aggregations - The Count Function
+--Query a count of the number of cities in the CITY having a population larger than 100,00-0
+SELECT count (*) FROM City
+where population > 100000;
