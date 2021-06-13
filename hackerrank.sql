@@ -539,3 +539,7 @@ where district = 'California';
 --Average Population
 --Query the avergae population for all cities in city, rounded to the nearest integer
 select floor(avg(Population)) from city 
+
+--Japan Population
+--Query the sum of hte populations for all Japanese Cities in the CITY. The countrycode for Japan is JPN
+select sum(Population) from city where countrycode = 'JPN';
