@@ -526,3 +526,7 @@ FROM TRIANGLES;
 --Query a count of the number of cities in the CITY having a population larger than 100,00-0
 SELECT count (*) FROM City
 where population > 100000;
+
+--Revising Aggregations - The Sum Function
+--Query the total population of all cities in CITY where district is California
+select sum(Population) from city where District = 'California';
