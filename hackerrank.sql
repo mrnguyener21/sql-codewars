@@ -506,3 +506,6 @@ select name from employee order by name asc;
 select name from employee
 where salary > 2000 and months <10
 order by employee_id asc;
+
+--type of triangle
+--write a query identifying the type of each record in the triangles table using its side length.
