@@ -573,3 +573,14 @@ select employee_id, (salary * months) earnings from employee
 --1)The sum of all values in LAT_N rounded to a scale of 2 decimal places
 --2) the sum of all valuesi n LONG_W rounded to a scale of 2 decimal places
 select round(sum(lat_n),2), round(sum(Long_w),2) from station
+
+
+
+--Weather Observation Station 13
+--Query the sum of LAT_N from Station having values greater than 38.7880 and less than 137.2345
+select round(sum(lat_n),4)
+from (
+    select lat_n
+    from station
+    where lat_n > 38.7880 and lat_n < 137.2345
+);
