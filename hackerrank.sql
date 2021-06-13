@@ -565,3 +565,11 @@ select employee_id, (salary * months) earnings from employee
     where (salary * months) in (
     select max(salary * months) from employee)
 )group by earnings;
+
+
+
+--Weather Observation Staton 2
+--query the following two values from the Station table
+--1)The sum of all values in LAT_N rounded to a scale of 2 decimal places
+--2) the sum of all valuesi n LONG_W rounded to a scale of 2 decimal places
+select round(sum(lat_n),2), round(sum(Long_w),2) from station
