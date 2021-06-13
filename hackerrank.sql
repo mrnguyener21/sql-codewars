@@ -535,3 +535,7 @@ select sum(Population) from city where District = 'California';
 --Query the average population of all cities in city where district is california
 select avg(Population) from city
 where district = 'California';
+
+--Average Population
+--Query the avergae population for all cities in city, rounded to the nearest integer
+select floor(avg(Population)) from city 
