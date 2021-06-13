@@ -584,3 +584,13 @@ from (
     from station
     where lat_n > 38.7880 and lat_n < 137.2345
 );
+
+
+--weather observation station 14
+--query the greatest value of lat_n from station that is less than 137.2345. Truncate your answer to 4 decimal places
+select round(max(lat_n),4)
+from (
+    select lat_n
+    from station
+    where lat_n < 137.2345
+);
