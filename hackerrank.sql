@@ -543,3 +543,7 @@ select floor(avg(Population)) from city
 --Japan Population
 --Query the sum of hte populations for all Japanese Cities in the CITY. The countrycode for Japan is JPN
 select sum(Population) from city where countrycode = 'JPN';
+
+--Population Density Difference
+--Query the difference between the maximum and minimum populations in the city
+select (max(population) - min(population)) from city;
