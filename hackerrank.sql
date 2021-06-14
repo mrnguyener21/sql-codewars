@@ -634,3 +634,10 @@ query sum(city.population)
 from city
 join country on city.countrycode = country.code
 where continent = 'Asia';
+
+--African Cities
+--Given the city and country tables, query the names of all cities where the continent is 'Africa'
+select city.name
+from city
+join country on city.countrycode = country.code
+where continent = 'Africa';
