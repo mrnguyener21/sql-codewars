@@ -613,3 +613,16 @@ where rownum = 1;
 select round(min(lat_n),4)
 from station
 where lat_n >  38.7780;
+
+
+--weather observation station 18
+--query the long_w where the smallest lat_n in station is greater than 38.7780
+--round your answer to 4 decimal places
+select round(long_w,4)
+from (
+    select *
+    from station
+    where lat_n > 38.7780
+    order by lat_n asc
+)
+where rownum = 1;
