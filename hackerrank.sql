@@ -615,7 +615,7 @@ from station
 where lat_n >  38.7780;
 
 
---weather observation station 18
+--weather observation station 17
 --query the long_w where the smallest lat_n in station is greater than 38.7780
 --round your answer to 4 decimal places
 select round(long_w,4)
@@ -626,3 +626,11 @@ from (
     order by lat_n asc
 )
 where rownum = 1;
+
+--Population Census
+--Given the City and Country Tables
+--query the sum of the populations of all cities where the CONTINENT is 'Asia'
+query sum(city.population)
+from city
+join country on city.countrycode = country.code
+where continent = 'Asia';
