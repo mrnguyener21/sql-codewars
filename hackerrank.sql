@@ -651,3 +651,22 @@ from country
 join city on country.code = city.countrycode
 group by country.continent;
 --NOTE: FOR GROUP BY AFTER JOIN IS USED, AGGREGATED COLUMN SHOULD STILL BE IN THE INITIAL SELECT CLAUSE
+
+--weather observation station 5
+--query the two cities in station with the shortest and longest city names as well as their respective lengths
+--if there is more than one smallest or largest city, choose the one that comes first when ordered alphabetically
+select city,length(city)
+from (
+    select *
+    from station
+    order by length(city) desc, city asc
+)
+where rownum = 1;
+
+select city,length(city)
+from (
+    select *
+    from station
+    order by length(city) asc, city asc
+)
+where rownum = 1;
