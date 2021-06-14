@@ -605,3 +605,11 @@ from(
     order by lat_n desc
 )
 where rownum = 1;
+
+
+--weather observation station 16
+--query the smallest lat_n from station that is greater than 38.77880
+--round your answer to 4 decimal places.
+select round(min(lat_n),4)
+from station
+where lat_n >  38.7780;
