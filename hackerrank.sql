@@ -641,3 +641,13 @@ select city.name
 from city
 join country on city.countrycode = country.code
 where continent = 'Africa';
+
+
+--Average Population of Each Continent
+--Given the City and Country tables
+--query the names of all the continents(country.continent) and their respective avergae city populations(city.population) rounded down to the nearest integer
+select country.continent, floor(avg(city.population))
+from country
+join city on country.code = city.countrycode
+group by country.continent;
+--NOTE: FOR GROUP BY AFTER JOIN IS USED, AGGREGATED COLUMN SHOULD STILL BE IN THE INITIAL SELECT CLAUSE
