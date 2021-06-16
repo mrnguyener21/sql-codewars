@@ -670,3 +670,15 @@ from (
     order by length(city) asc, city asc
 )
 where rownum = 1;
+
+--THE PADS
+--Generate the following two result sets:
+
+--1)query an alphabetically ordered list of all names in OCCUPATION, immediately followed by the first letter of each profession as a parenthetical
+
+--2) Query the number of occurences of each occupation in Occupations. Sort the occurences in ascending order and output them in the following format:
+    --There are a total of [occupation_count] [occupation]s.
+
+select name ||'('||substr(occupation,1,1)||')' 
+from occupations
+order by name;
