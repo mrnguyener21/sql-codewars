@@ -687,3 +687,11 @@ select 'There are a total of ' || count(*) || ' ' || lower(occupation) || 's.'
 from occupations
 group by occupation
 order by count(*), occupation;
+
+
+--WEATHER OBSERVATION 18
+--Manhattan distnace: |x1 - x2| + |y1 - y2|
+-- so to get the manahttan distance of this equation I need to do the following
+    --|minimum  value of Lat_N - maximum value of lat_N| - |miminum value of long_W - maximum value of long_W|
+select round((abs(min(lat_N) - max(lat_N)) + abs(min(long_W) - max(long_W)) ),4)
+from station;
